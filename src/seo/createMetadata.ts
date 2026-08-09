@@ -13,10 +13,19 @@ interface CreateMetadataOptions {
 export function createMetadata({
   title,
   description,
-  image = "/og.png",
+  image,
   canonical,
   keywords = [],
 }: CreateMetadataOptions = {}): Metadata {
+  /*
+   * Social platforms render SVG inconsistently or not at all, so a vector
+   * image is never published as a share image. Falling back rather than
+   * failing keeps a mistake here from producing a link preview with no
+   * image at all.
+   */
+  const shareImage =
+    image && !image.endsWith(".svg") ? image : seoDefaults.image;
+
   const pageTitle = title
     ? `${title} | ${seoDefaults.siteName}`
     : seoDefaults.title;
@@ -48,7 +57,10 @@ export function createMetadata({
       description: pageDescription,
       images: [
         {
-          url: image,
+          url: shareImage,
+          width: 1200,
+          height: 630,
+          alt: seoDefaults.siteName,
         },
       ],
     },
@@ -57,7 +69,7 @@ export function createMetadata({
       card: seoDefaults.twitterCard,
       title: pageTitle,
       description: pageDescription,
-      images: [image],
+      images: [shareImage],
     },
   };
 }

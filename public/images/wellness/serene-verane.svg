@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1050" width="1400" height="1050" role="img">
+  <defs>
+    <linearGradient id="wall-imageswellnesssereneveranesvg" x1="0.09" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#3a332b"/>
+      <stop offset="100%" stop-color="#211c17"/>
+    </linearGradient>
+    <linearGradient id="sky-imageswellnesssereneveranesvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8a882"/>
+      <stop offset="62%" stop-color="#8d8177"/>
+      <stop offset="100%" stop-color="#e8c89a"/>
+    </linearGradient>
+    <linearGradient id="spill-imageswellnesssereneveranesvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8d3ad" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e8d3ad" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo-imageswellnesssereneveranesvg" cx="0.390" cy="0.422" r="0.66">
+      <stop offset="0%" stop-color="#e8d3ad" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#e8d3ad" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-imageswellnesssereneveranesvg" cx="0.5" cy="0.5" r="0.78">
+      <stop offset="46%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.42"/>
+    </radialGradient>
+    <!-- The view is held just off focus, the way a lens holds it. -->
+    <filter id="depth-imageswellnesssereneveranesvg" x="-6%" y="-6%" width="112%" height="112%">
+      <feGaussianBlur stdDeviation="7.0"/>
+    </filter>
+    <clipPath id="opening-imageswellnesssereneveranesvg">
+      <rect x="274.6" y="121.1" width="543.0" height="645.0"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1400" height="1050" fill="url(#wall-imageswellnesssereneveranesvg)"/>
+  <rect width="1400" height="1050" fill="url(#halo-imageswellnesssereneveranesvg)"/>
+
+  <!-- the opening, and the place beyond it -->
+  <g clip-path="url(#opening-imageswellnesssereneveranesvg)" filter="url(#depth-imageswellnesssereneveranesvg)">
+    <rect x="274.6" y="121.1" width="543.0" height="645.0" fill="url(#sky-imageswellnesssereneveranesvg)"/>
+    <path d="M 274.6 390.2 L 290.6 391.8 L 306.6 393.9 L 322.6 393.7 L 338.5 390.0 L 354.5 384.9 L 370.5 382.6 L 386.4 386.1 L 402.4 395.1 L 418.4 406.4 L 434.4 417.1 L 450.3 426.7 L 466.3 436.0 L 482.3 445.1 L 498.2 451.4 L 514.2 452.3 L 530.2 447.6 L 546.2 440.4 L 562.1 435.1 L 578.1 433.8 L 594.1 435.1 L 610.0 435.9 L 626.0 434.7 L 642.0 432.1 L 658.0 429.5 L 673.9 426.3 L 689.9 420.2 L 705.9 409.5 L 721.9 395.6 L 737.8 382.9 L 753.8 375.6 L 769.8 374.4 L 785.7 377.2 L 801.7 381.1 L 817.7 385.3 L 817.7 766.1 L 274.6 766.1 Z" fill="#31383b" opacity="0.92"/>
+    <rect x="274.6" y="505.3" width="543.0" height="260.8" fill="#2b3336" opacity="0.88"/>
+  </g>
+  <rect x="410.4" y="121.1" width="1.5" height="645.0" fill="#211c17" opacity="0.7"/> <rect x="546.2" y="121.1" width="1.5" height="645.0" fill="#211c17" opacity="0.7"/> <rect x="681.9" y="121.1" width="1.5" height="645.0" fill="#211c17" opacity="0.7"/>
+  <rect x="274.6" y="121.1" width="543.0" height="645.0" fill="none" stroke="#9a8256" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- the sill -->
+  <rect x="253.6" y="766.1" width="585.0" height="10.5" fill="#e8d3ad" opacity="0.24"/>
+
+  <!-- floor, and the light that falls across it -->
+  <rect y="752" width="1400" height="298" fill="#171310"/>
+  <path d="M 275 752 L 818 752 L 1062 1050 L 85 1050 Z" fill="url(#spill-imageswellnesssereneveranesvg)"/>
+  <rect y="752" width="1400" height="1" fill="#9a8256" opacity="0.3"/>
+
+  <!-- foreground -->
+  <rect x="743" y="643" width="615" height="109" fill="#171310" opacity="0.94"/>
+  <rect x="743" y="643" width="615" height="1.5" fill="#e8d3ad" opacity="0.2"/>
+  <rect x="659" y="364" width="2" height="388" fill="#171310" opacity="0.86"/>
+  <circle cx="660" cy="364" r="32" fill="#e8d3ad" opacity="0.2"/>
+
+
+  <rect width="1400" height="1050" fill="url(#vig-imageswellnesssereneveranesvg)"/>
+</svg>

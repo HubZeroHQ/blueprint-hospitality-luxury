@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1050" width="1400" height="1050" role="img">
+  <defs>
+    <linearGradient id="wall-imagesstaysreefhousesvg" x1="0.25" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#232a30"/>
+      <stop offset="100%" stop-color="#12171b"/>
+    </linearGradient>
+    <linearGradient id="sky-imagesstaysreefhousesvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4e3cc"/>
+      <stop offset="62%" stop-color="#dfd0bc"/>
+      <stop offset="100%" stop-color="#fdeed6"/>
+    </linearGradient>
+    <linearGradient id="spill-imagesstaysreefhousesvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cfe0ea" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#cfe0ea" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo-imagesstaysreefhousesvg" cx="0.483" cy="0.442" r="0.66">
+      <stop offset="0%" stop-color="#cfe0ea" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#cfe0ea" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-imagesstaysreefhousesvg" cx="0.5" cy="0.5" r="0.78">
+      <stop offset="46%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.42"/>
+    </radialGradient>
+    <!-- The view is held just off focus, the way a lens holds it. -->
+    <filter id="depth-imagesstaysreefhousesvg" x="-6%" y="-6%" width="112%" height="112%">
+      <feGaussianBlur stdDeviation="7.0"/>
+    </filter>
+    <clipPath id="opening-imagesstaysreefhousesvg">
+      <rect x="158.7" y="213.3" width="1035.1" height="500.8"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1400" height="1050" fill="url(#wall-imagesstaysreefhousesvg)"/>
+  <rect width="1400" height="1050" fill="url(#halo-imagesstaysreefhousesvg)"/>
+
+  <!-- the opening, and the place beyond it -->
+  <g clip-path="url(#opening-imagesstaysreefhousesvg)" filter="url(#depth-imagesstaysreefhousesvg)">
+    <rect x="158.7" y="213.3" width="1035.1" height="500.8" fill="url(#sky-imagesstaysreefhousesvg)"/>
+    <path d="M 158.7 474.4 L 189.1 465.8 L 219.5 459.4 L 250.0 455.2 L 280.4 452.4 L 310.9 450.8 L 341.3 452.0 L 371.8 457.3 L 402.2 466.0 L 432.7 475.1 L 463.1 481.4 L 493.5 483.9 L 524.0 484.2 L 554.4 485.0 L 584.9 487.3 L 615.3 490.3 L 645.8 492.8 L 676.2 495.4 L 706.6 499.5 L 737.1 506.0 L 767.5 513.1 L 798.0 517.5 L 828.4 516.7 L 858.9 511.1 L 889.3 503.3 L 919.7 495.8 L 950.2 489.1 L 980.6 482.5 L 1011.1 475.8 L 1041.5 470.4 L 1072.0 468.2 L 1102.4 469.5 L 1132.8 471.8 L 1163.3 472.1 L 1193.7 468.8 L 1193.7 714.1 L 158.7 714.1 Z" fill="#5f8f8d" opacity="0.92"/>
+    <rect x="158.7" y="553.5" width="1035.1" height="160.6" fill="#7fc0bb" opacity="0.88"/>
+  </g>
+
+  <rect x="158.7" y="213.3" width="1035.1" height="500.8" fill="none" stroke="#6f8494" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- the sill -->
+  <rect x="137.7" y="714.1" width="1077.1" height="10.5" fill="#cfe0ea" opacity="0.24"/>
+
+  <!-- floor, and the light that falls across it -->
+  <rect y="815" width="1400" height="235" fill="#0d1114"/>
+  <path d="M 159 815 L 1194 815 L 1660 1050 L -204 1050 Z" fill="url(#spill-imagesstaysreefhousesvg)"/>
+  <rect y="815" width="1400" height="1" fill="#6f8494" opacity="0.3"/>
+
+  <!-- foreground -->
+  <rect x="802" y="671" width="556" height="144" fill="#0d1114" opacity="0.94"/>
+  <rect x="802" y="671" width="556" height="1.5" fill="#cfe0ea" opacity="0.2"/>
+  <rect x="718" y="459" width="2" height="356" fill="#0d1114" opacity="0.86"/>
+  <circle cx="719" cy="459" r="32" fill="#cfe0ea" opacity="0.2"/>
+
+
+  <rect width="1400" height="1050" fill="url(#vig-imagesstaysreefhousesvg)"/>
+</svg>

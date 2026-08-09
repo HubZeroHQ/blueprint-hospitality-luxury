@@ -1,7 +1,32 @@
 {
-  "name": "blueprint-base",
-  "version": "0.1.0",
+  "name": "blueprint-hospitality-luxury",
+  "version": "1.0.0",
   "private": true,
+  "description": "HubZero Blueprint — the Hospitality architecture in the Luxury design language, demonstrated through Montreval Hotels, a fictional collection of six houses.",
+  "keywords": [
+    "hubzero",
+    "blueprint",
+    "hospitality",
+    "luxury",
+    "hotel",
+    "nextjs",
+    "react",
+    "tailwindcss",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "HubZero",
+    "url": "https://hubzero.in"
+  },
+  "homepage": "https://github.com/HubZeroHQ/blueprint-hospitality-luxury#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HubZeroHQ/blueprint-hospitality-luxury.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HubZeroHQ/blueprint-hospitality-luxury/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,8 +40,7 @@
     "next": "16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "tailwind-merge": "^3.6.0",
-    "zod": "^4.4.3"
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
     "@hubzero/blueprint": "^1.6.0",

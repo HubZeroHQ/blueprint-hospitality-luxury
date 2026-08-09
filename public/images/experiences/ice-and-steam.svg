@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1050" width="1400" height="1050" role="img">
+  <defs>
+    <linearGradient id="sky-imagesexperiencesiceandsteamsvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9a6a0"/>
+      <stop offset="55%" stop-color="#8f8896"/>
+      <stop offset="100%" stop-color="#3f4653"/>
+    </linearGradient>
+    <radialGradient id="glow-imagesexperiencesiceandsteamsvg" cx="0.498" cy="0.217" r="0.402">
+      <stop offset="0%" stop-color="#e6bfae" stop-opacity="0.98"/>
+      <stop offset="38%" stop-color="#e6bfae" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#e6bfae" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="haze-imagesexperiencesiceandsteamsvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6bfae" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#e6bfae" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#e6bfae" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig-imagesexperiencesiceandsteamsvg" cx="0.5" cy="0.44" r="0.8">
+      <stop offset="52%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.3"/>
+    </radialGradient>
+    <filter id="soft-imagesexperiencesiceandsteamsvg" x="-8%" y="-8%" width="116%" height="116%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1050" fill="url(#sky-imagesexperiencesiceandsteamsvg)"/>
+  <rect width="1400" height="1050" fill="url(#glow-imagesexperiencesiceandsteamsvg)"/>
+  <rect y="378" width="1400" height="158" fill="url(#haze-imagesexperiencesiceandsteamsvg)"/>
+
+  <g filter="url(#soft-imagesexperiencesiceandsteamsvg)">
+    <path d="M 0.0 480.4 L 41.2 508.6 L 82.4 522.8 L 123.5 522.4 L 164.7 516.0 L 205.9 514.5 L 247.1 522.5 L 288.2 536.1 L 329.4 548.5 L 370.6 557.0 L 411.8 563.6 L 452.9 569.7 L 494.1 571.0 L 535.3 559.5 L 576.5 531.5 L 617.6 492.4 L 658.8 454.9 L 700.0 429.5 L 741.2 417.8 L 782.4 413.9 L 823.5 411.7 L 864.7 410.5 L 905.9 413.1 L 947.1 419.7 L 988.2 425.0 L 1029.4 422.1 L 1070.6 410.8 L 1111.8 399.6 L 1152.9 400.0 L 1194.1 417.3 L 1235.3 447.1 L 1276.5 479.5 L 1317.6 507.9 L 1358.8 532.0 L 1400.0 553.5 L 1400 1050 L 0 1050 Z" fill="#4c5462"/> <path d="M 0.0 480.4 L 41.2 508.6 L 82.4 522.8 L 123.5 522.4 L 164.7 516.0 L 205.9 514.5 L 247.1 522.5 L 288.2 536.1 L 329.4 548.5 L 370.6 557.0 L 411.8 563.6 L 452.9 569.7 L 494.1 571.0 L 535.3 559.5 L 576.5 531.5 L 617.6 492.4 L 658.8 454.9 L 700.0 429.5 L 741.2 417.8 L 782.4 413.9 L 823.5 411.7 L 864.7 410.5 L 905.9 413.1 L 947.1 419.7 L 988.2 425.0 L 1029.4 422.1 L 1070.6 410.8 L 1111.8 399.6 L 1152.9 400.0 L 1194.1 417.3 L 1235.3 447.1 L 1276.5 479.5 L 1317.6 507.9 L 1358.8 532.0 L 1400.0 553.5" fill="none" stroke="#e6bfae" stroke-width="1.20" opacity="0.50"/>
+  </g>
+  <path d="M 0.0 623.3 L 41.2 620.6 L 82.4 609.6 L 123.5 594.4 L 164.7 575.8 L 205.9 551.2 L 247.1 520.3 L 288.2 489.3 L 329.4 468.1 L 370.6 463.2 L 411.8 471.5 L 452.9 483.5 L 494.1 491.0 L 535.3 492.4 L 576.5 492.3 L 617.6 494.1 L 658.8 497.2 L 700.0 498.4 L 741.2 498.4 L 782.4 503.6 L 823.5 521.0 L 864.7 551.4 L 905.9 586.5 L 947.1 614.9 L 988.2 630.0 L 1029.4 633.4 L 1070.6 630.7 L 1111.8 625.2 L 1152.9 615.4 L 1194.1 599.9 L 1235.3 581.7 L 1276.5 568.4 L 1317.6 565.4 L 1358.8 570.1 L 1400.0 573.3 L 1400 1050 L 0 1050 Z" fill="#343b47"/> <path d="M 0.0 623.3 L 41.2 620.6 L 82.4 609.6 L 123.5 594.4 L 164.7 575.8 L 205.9 551.2 L 247.1 520.3 L 288.2 489.3 L 329.4 468.1 L 370.6 463.2 L 411.8 471.5 L 452.9 483.5 L 494.1 491.0 L 535.3 492.4 L 576.5 492.3 L 617.6 494.1 L 658.8 497.2 L 700.0 498.4 L 741.2 498.4 L 782.4 503.6 L 823.5 521.0 L 864.7 551.4 L 905.9 586.5 L 947.1 614.9 L 988.2 630.0 L 1029.4 633.4 L 1070.6 630.7 L 1111.8 625.2 L 1152.9 615.4 L 1194.1 599.9 L 1235.3 581.7 L 1276.5 568.4 L 1317.6 565.4 L 1358.8 570.1 L 1400.0 573.3" fill="none" stroke="#e6bfae" stroke-width="1.05" opacity="0.41"/> <path d="M 0.0 576.0 L 41.2 569.3 L 82.4 563.4 L 123.5 555.7 L 164.7 544.0 L 205.9 532.1 L 247.1 528.2 L 288.2 538.8 L 329.4 562.7 L 370.6 591.9 L 411.8 617.3 L 452.9 635.4 L 494.1 648.3 L 535.3 658.8 L 576.5 666.0 L 617.6 666.7 L 658.8 660.6 L 700.0 652.8 L 741.2 651.2 L 782.4 659.0 L 823.5 671.6 L 864.7 679.8 L 905.9 677.1 L 947.1 664.0 L 988.2 645.7 L 1029.4 626.0 L 1070.6 604.7 L 1111.8 580.7 L 1152.9 556.3 L 1194.1 538.6 L 1235.3 534.0 L 1276.5 542.5 L 1317.6 556.4 L 1358.8 566.6 L 1400.0 569.3 L 1400 1050 L 0 1050 Z" fill="#20262e"/> <path d="M 0.0 576.0 L 41.2 569.3 L 82.4 563.4 L 123.5 555.7 L 164.7 544.0 L 205.9 532.1 L 247.1 528.2 L 288.2 538.8 L 329.4 562.7 L 370.6 591.9 L 411.8 617.3 L 452.9 635.4 L 494.1 648.3 L 535.3 658.8 L 576.5 666.0 L 617.6 666.7 L 658.8 660.6 L 700.0 652.8 L 741.2 651.2 L 782.4 659.0 L 823.5 671.6 L 864.7 679.8 L 905.9 677.1 L 947.1 664.0 L 988.2 645.7 L 1029.4 626.0 L 1070.6 604.7 L 1111.8 580.7 L 1152.9 556.3 L 1194.1 538.6 L 1235.3 534.0 L 1276.5 542.5 L 1317.6 556.4 L 1358.8 566.6 L 1400.0 569.3" fill="none" stroke="#e6bfae" stroke-width="0.90" opacity="0.33"/> <path d="M 0.0 722.4 L 41.2 742.2 L 82.4 749.8 L 123.5 747.1 L 164.7 740.0 L 205.9 732.5 L 247.1 724.4 L 288.2 714.2 L 329.4 702.8 L 370.6 694.6 L 411.8 693.0 L 452.9 696.2 L 494.1 697.0 L 535.3 688.6 L 576.5 670.4 L 617.6 648.0 L 658.8 628.5 L 700.0 615.3 L 741.2 607.3 L 782.4 602.8 L 823.5 603.4 L 864.7 612.3 L 905.9 630.3 L 947.1 652.2 L 988.2 669.8 L 1029.4 677.9 L 1070.6 678.2 L 1111.8 677.4 L 1152.9 681.2 L 1194.1 689.8 L 1235.3 700.1 L 1276.5 709.9 L 1317.6 720.5 L 1358.8 733.9 L 1400.0 748.5 L 1400 1050 L 0 1050 Z" fill="#20262e"/> <path d="M 0.0 722.4 L 41.2 742.2 L 82.4 749.8 L 123.5 747.1 L 164.7 740.0 L 205.9 732.5 L 247.1 724.4 L 288.2 714.2 L 329.4 702.8 L 370.6 694.6 L 411.8 693.0 L 452.9 696.2 L 494.1 697.0 L 535.3 688.6 L 576.5 670.4 L 617.6 648.0 L 658.8 628.5 L 700.0 615.3 L 741.2 607.3 L 782.4 602.8 L 823.5 603.4 L 864.7 612.3 L 905.9 630.3 L 947.1 652.2 L 988.2 669.8 L 1029.4 677.9 L 1070.6 678.2 L 1111.8 677.4 L 1152.9 681.2 L 1194.1 689.8 L 1235.3 700.1 L 1276.5 709.9 L 1317.6 720.5 L 1358.8 733.9 L 1400.0 748.5" fill="none" stroke="#e6bfae" stroke-width="0.75" opacity="0.24"/> <path d="M 0.0 806.6 L 41.2 793.0 L 82.4 775.9 L 123.5 762.5 L 164.7 756.5 L 205.9 755.6 L 247.1 754.8 L 288.2 750.7 L 329.4 744.0 L 370.6 737.1 L 411.8 729.8 L 452.9 719.4 L 494.1 704.3 L 535.3 687.3 L 576.5 675.1 L 617.6 673.6 L 658.8 683.2 L 700.0 698.8 L 741.2 714.1 L 782.4 726.7 L 823.5 737.7 L 864.7 748.5 L 905.9 757.7 L 947.1 762.2 L 988.2 761.5 L 1029.4 759.3 L 1070.6 761.9 L 1111.8 772.3 L 1152.9 787.4 L 1194.1 800.6 L 1235.3 806.6 L 1276.5 805.0 L 1317.6 798.6 L 1358.8 789.5 L 1400.0 776.7 L 1400 1050 L 0 1050 Z" fill="#12161c"/> <path d="M 0.0 806.6 L 41.2 793.0 L 82.4 775.9 L 123.5 762.5 L 164.7 756.5 L 205.9 755.6 L 247.1 754.8 L 288.2 750.7 L 329.4 744.0 L 370.6 737.1 L 411.8 729.8 L 452.9 719.4 L 494.1 704.3 L 535.3 687.3 L 576.5 675.1 L 617.6 673.6 L 658.8 683.2 L 700.0 698.8 L 741.2 714.1 L 782.4 726.7 L 823.5 737.7 L 864.7 748.5 L 905.9 757.7 L 947.1 762.2 L 988.2 761.5 L 1029.4 759.3 L 1070.6 761.9 L 1111.8 772.3 L 1152.9 787.4 L 1194.1 800.6 L 1235.3 806.6 L 1276.5 805.0 L 1317.6 798.6 L 1358.8 789.5 L 1400.0 776.7" fill="none" stroke="#e6bfae" stroke-width="0.60" opacity="0.16"/>
+
+  <rect y="798" width="1400" height="252" fill="#1b222a"/>
+  <rect y="798" width="1400" height="252" fill="url(#glow-imagesexperiencesiceandsteamsvg)" opacity="0.4"/>
+  <rect y="798" width="1400" height="1" fill="#e6bfae" opacity="0.22"/>
+  <rect x="53" y="798" width="212" height="2.1" fill="#e6bfae" opacity="0.11"/> <rect x="474" y="820" width="535" height="1.8" fill="#e6bfae" opacity="0.09"/> <rect x="90" y="844" width="470" height="1.9" fill="#e6bfae" opacity="0.11"/> <rect x="831" y="862" width="831" height="0.8" fill="#e6bfae" opacity="0.12"/> <rect x="9" y="884" width="760" height="1.8" fill="#e6bfae" opacity="0.14"/> <rect x="447" y="905" width="629" height="1.0" fill="#e6bfae" opacity="0.10"/> <rect x="38" y="925" width="746" height="2.0" fill="#e6bfae" opacity="0.15"/> <rect x="528" y="947" width="205" height="1.5" fill="#e6bfae" opacity="0.08"/> <rect x="778" y="966" width="204" height="0.9" fill="#e6bfae" opacity="0.14"/> <rect x="395" y="991" width="394" height="2.3" fill="#e6bfae" opacity="0.10"/> <rect x="663" y="1012" width="218" height="2.3" fill="#e6bfae" opacity="0.10"/> <rect x="42" y="1031" width="472" height="1.2" fill="#e6bfae" opacity="0.14"/>
+
+
+  <rect width="1400" height="1050" fill="url(#vig-imagesexperiencesiceandsteamsvg)"/>
+</svg>

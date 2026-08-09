@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1050" width="1400" height="1050" role="img">
+  <defs>
+    <linearGradient id="wall-imagesdiningcimaisesvg" x1="0.32" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#2a241d"/>
+      <stop offset="100%" stop-color="#1a1611"/>
+    </linearGradient>
+    <linearGradient id="sky-imagesdiningcimaisesvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8a882"/>
+      <stop offset="62%" stop-color="#8d8177"/>
+      <stop offset="100%" stop-color="#e8c89a"/>
+    </linearGradient>
+    <linearGradient id="spill-imagesdiningcimaisesvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0d9ae" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f0d9ae" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo-imagesdiningcimaisesvg" cx="0.849" cy="0.411" r="0.66">
+      <stop offset="0%" stop-color="#f0d9ae" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#f0d9ae" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-imagesdiningcimaisesvg" cx="0.5" cy="0.5" r="0.78">
+      <stop offset="46%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.42"/>
+    </radialGradient>
+    <!-- The view is held just off focus, the way a lens holds it. -->
+    <filter id="depth-imagesdiningcimaisesvg" x="-6%" y="-6%" width="112%" height="112%">
+      <feGaussianBlur stdDeviation="7.0"/>
+    </filter>
+    <clipPath id="opening-imagesdiningcimaisesvg">
+      <rect x="895.7" y="66.9" width="586.3" height="730.2"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1400" height="1050" fill="url(#wall-imagesdiningcimaisesvg)"/>
+  <rect width="1400" height="1050" fill="url(#halo-imagesdiningcimaisesvg)"/>
+
+  <!-- the opening, and the place beyond it -->
+  <g clip-path="url(#opening-imagesdiningcimaisesvg)" filter="url(#depth-imagesdiningcimaisesvg)">
+    <rect x="895.7" y="66.9" width="586.3" height="730.2" fill="url(#sky-imagesdiningcimaisesvg)"/>
+    <path d="M 895.7 385.0 L 913.0 389.2 L 930.2 392.3 L 947.5 395.4 L 964.7 399.2 L 982.0 401.0 L 999.2 397.1 L 1016.5 385.9 L 1033.7 369.9 L 1051.0 354.5 L 1068.2 343.3 L 1085.4 336.7 L 1102.7 332.4 L 1119.9 329.0 L 1137.2 327.4 L 1154.4 329.1 L 1171.7 333.6 L 1188.9 337.6 L 1206.2 337.3 L 1223.4 332.6 L 1240.7 326.9 L 1257.9 324.8 L 1275.1 328.6 L 1292.4 336.7 L 1309.6 346.3 L 1326.9 356.2 L 1344.1 367.5 L 1361.4 380.7 L 1378.6 393.7 L 1395.9 402.2 L 1413.1 403.2 L 1430.4 397.8 L 1447.6 390.6 L 1464.8 385.5 L 1482.1 383.4 L 1482.1 797.1 L 895.7 797.1 Z" fill="#31383b" opacity="0.92"/>
+    <rect x="895.7" y="461.9" width="586.3" height="335.3" fill="#2b3336" opacity="0.88"/>
+  </g>
+
+  <rect x="895.7" y="66.9" width="586.3" height="730.2" fill="none" stroke="#a3854f" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- the sill -->
+  <rect x="874.7" y="797.1" width="628.3" height="10.5" fill="#f0d9ae" opacity="0.24"/>
+
+  <!-- floor, and the light that falls across it -->
+  <rect y="802" width="1400" height="248" fill="#150f0a"/>
+  <path d="M 896 802 L 1400 802 L 1746 1050 L 691 1050 Z" fill="url(#spill-imagesdiningcimaisesvg)"/>
+  <rect y="802" width="1400" height="1" fill="#a3854f" opacity="0.3"/>
+
+  <!-- foreground -->
+  <rect x="42" y="648" width="474" height="154" fill="#150f0a" opacity="0.94"/>
+  <rect x="42" y="648" width="474" height="1.5" fill="#f0d9ae" opacity="0.2"/>
+
+
+
+  <rect width="1400" height="1050" fill="url(#vig-imagesdiningcimaisesvg)"/>
+</svg>

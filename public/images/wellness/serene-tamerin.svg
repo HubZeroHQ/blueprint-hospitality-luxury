@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1050" width="1400" height="1050" role="img">
+  <defs>
+    <linearGradient id="wall-imageswellnessserenetamerinsvg" x1="0.24" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#ded5c6"/>
+      <stop offset="100%" stop-color="#bdb2a0"/>
+    </linearGradient>
+    <linearGradient id="sky-imageswellnessserenetamerinsvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcecec"/>
+      <stop offset="62%" stop-color="#bcd9da"/>
+      <stop offset="100%" stop-color="#f4fbfa"/>
+    </linearGradient>
+    <linearGradient id="spill-imageswellnessserenetamerinsvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbf3e2" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#fbf3e2" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo-imageswellnessserenetamerinsvg" cx="0.485" cy="0.448" r="0.66">
+      <stop offset="0%" stop-color="#fbf3e2" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#fbf3e2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-imageswellnessserenetamerinsvg" cx="0.5" cy="0.5" r="0.78">
+      <stop offset="46%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.42"/>
+    </radialGradient>
+    <!-- The view is held just off focus, the way a lens holds it. -->
+    <filter id="depth-imageswellnessserenetamerinsvg" x="-6%" y="-6%" width="112%" height="112%">
+      <feGaussianBlur stdDeviation="7.0"/>
+    </filter>
+    <clipPath id="opening-imageswellnessserenetamerinsvg">
+      <rect x="142.2" y="242.8" width="1072.9" height="455.1"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1400" height="1050" fill="url(#wall-imageswellnessserenetamerinsvg)"/>
+  <rect width="1400" height="1050" fill="url(#halo-imageswellnessserenetamerinsvg)"/>
+
+  <!-- the opening, and the place beyond it -->
+  <g clip-path="url(#opening-imageswellnessserenetamerinsvg)" filter="url(#depth-imageswellnessserenetamerinsvg)">
+    <rect x="142.2" y="242.8" width="1072.9" height="455.1" fill="url(#sky-imageswellnessserenetamerinsvg)"/>
+    <path d="M 142.2 503.5 L 173.7 503.1 L 205.3 499.5 L 236.8 494.6 L 268.4 489.1 L 300.0 482.4 L 331.5 474.1 L 363.1 465.3 L 394.6 458.8 L 426.2 456.4 L 457.7 457.8 L 489.3 460.4 L 520.9 461.5 L 552.4 460.6 L 584.0 458.9 L 615.5 457.9 L 647.1 457.5 L 678.6 456.9 L 710.2 455.7 L 741.8 455.7 L 773.3 459.0 L 804.9 466.6 L 836.4 476.9 L 868.0 486.4 L 899.5 493.0 L 931.1 496.6 L 962.6 498.6 L 994.2 499.7 L 1025.8 499.4 L 1057.3 496.8 L 1088.9 492.4 L 1120.4 488.5 L 1152.0 487.2 L 1183.5 488.8 L 1215.1 491.2 L 1215.1 697.9 L 142.2 697.9 Z" fill="#66b7b0" opacity="0.92"/>
+    <rect x="142.2" y="539.6" width="1072.9" height="158.3" fill="#8fd6cd" opacity="0.88"/>
+  </g>
+
+  <rect x="142.2" y="242.8" width="1072.9" height="455.1" fill="none" stroke="#7d6a49" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- the sill -->
+  <rect x="121.2" y="697.9" width="1114.9" height="10.5" fill="#fbf3e2" opacity="0.24"/>
+
+  <!-- floor, and the light that falls across it -->
+  <rect y="770" width="1400" height="280" fill="#8f8371"/>
+  <path d="M 142 770 L 1215 770 L 1698 1050 L -233 1050 Z" fill="url(#spill-imageswellnessserenetamerinsvg)"/>
+  <rect y="770" width="1400" height="1" fill="#7d6a49" opacity="0.3"/>
+
+  <!-- foreground -->
+  <rect x="893" y="630" width="465" height="141" fill="#8f8371" opacity="0.94"/>
+  <rect x="893" y="630" width="465" height="1.5" fill="#fbf3e2" opacity="0.2"/>
+  <rect x="809" y="380" width="2" height="390" fill="#8f8371" opacity="0.86"/>
+  <circle cx="810" cy="380" r="32" fill="#fbf3e2" opacity="0.2"/>
+
+
+  <rect width="1400" height="1050" fill="url(#vig-imageswellnessserenetamerinsvg)"/>
+</svg>

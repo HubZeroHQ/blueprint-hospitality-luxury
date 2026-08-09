@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1050" width="1400" height="1050" role="img">
+  <defs>
+    <linearGradient id="wall-imagesexperiencesthebreadtablesvg" x1="0.09" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#2a241d"/>
+      <stop offset="100%" stop-color="#1a1611"/>
+    </linearGradient>
+    <linearGradient id="sky-imagesexperiencesthebreadtablesvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e5bd8a"/>
+      <stop offset="62%" stop-color="#bc9a72"/>
+      <stop offset="100%" stop-color="#f7d7a4"/>
+    </linearGradient>
+    <linearGradient id="spill-imagesexperiencesthebreadtablesvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0d9ae" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f0d9ae" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo-imagesexperiencesthebreadtablesvg" cx="0.807" cy="0.492" r="0.66">
+      <stop offset="0%" stop-color="#f0d9ae" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#f0d9ae" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-imagesexperiencesthebreadtablesvg" cx="0.5" cy="0.5" r="0.78">
+      <stop offset="46%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.42"/>
+    </radialGradient>
+    <!-- The view is held just off focus, the way a lens holds it. -->
+    <filter id="depth-imagesexperiencesthebreadtablesvg" x="-6%" y="-6%" width="112%" height="112%">
+      <feGaussianBlur stdDeviation="7.0"/>
+    </filter>
+    <clipPath id="opening-imagesexperiencesthebreadtablesvg">
+      <rect x="754.0" y="123.1" width="751.2" height="787.6"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1400" height="1050" fill="url(#wall-imagesexperiencesthebreadtablesvg)"/>
+  <rect width="1400" height="1050" fill="url(#halo-imagesexperiencesthebreadtablesvg)"/>
+
+  <!-- the opening, and the place beyond it -->
+  <g clip-path="url(#opening-imagesexperiencesthebreadtablesvg)" filter="url(#depth-imagesexperiencesthebreadtablesvg)">
+    <rect x="754.0" y="123.1" width="751.2" height="787.6" fill="url(#sky-imagesexperiencesthebreadtablesvg)"/>
+    <path d="M 754.0 541.0 L 776.0 558.5 L 798.1 571.0 L 820.2 577.1 L 842.3 579.0 L 864.4 579.4 L 886.5 578.6 L 908.6 575.1 L 930.7 568.5 L 952.8 561.5 L 974.9 558.0 L 997.0 559.7 L 1019.1 563.8 L 1041.2 565.3 L 1063.3 560.7 L 1085.4 550.8 L 1107.5 539.0 L 1129.6 527.7 L 1151.7 516.8 L 1173.8 505.3 L 1195.8 494.0 L 1217.9 486.7 L 1240.0 487.1 L 1262.1 495.0 L 1284.2 506.4 L 1306.3 515.9 L 1328.4 521.1 L 1350.5 523.7 L 1372.6 526.5 L 1394.7 530.4 L 1416.8 533.9 L 1438.9 535.7 L 1461.0 537.5 L 1483.1 542.9 L 1505.2 554.2 L 1505.2 910.6 L 754.0 910.6 Z" fill="#4f4c39" opacity="0.92"/>
+    <rect x="754.0" y="649.3" width="751.2" height="261.3" fill="#4b4936" opacity="0.88"/>
+  </g>
+  <rect x="941.8" y="123.1" width="1.5" height="787.6" fill="#1a1611" opacity="0.7"/> <rect x="1129.6" y="123.1" width="1.5" height="787.6" fill="#1a1611" opacity="0.7"/> <rect x="1317.4" y="123.1" width="1.5" height="787.6" fill="#1a1611" opacity="0.7"/>
+  <rect x="754.0" y="123.1" width="751.2" height="787.6" fill="none" stroke="#a3854f" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- the sill -->
+  <rect x="733.0" y="910.6" width="793.2" height="10.5" fill="#f0d9ae" opacity="0.24"/>
+
+  <!-- floor, and the light that falls across it -->
+  <rect y="772" width="1400" height="278" fill="#150f0a"/>
+  <path d="M 754 772 L 1400 772 L 1843 1050 L 491 1050 Z" fill="url(#spill-imagesexperiencesthebreadtablesvg)"/>
+  <rect y="772" width="1400" height="1" fill="#a3854f" opacity="0.3"/>
+
+  <!-- foreground -->
+  <rect x="42" y="655" width="477" height="117" fill="#150f0a" opacity="0.94"/>
+  <rect x="42" y="655" width="477" height="1.5" fill="#f0d9ae" opacity="0.2"/>
+  <rect x="589" y="396" width="2" height="375" fill="#150f0a" opacity="0.86"/>
+  <circle cx="590" cy="396" r="32" fill="#f0d9ae" opacity="0.2"/>
+
+
+  <rect width="1400" height="1050" fill="url(#vig-imagesexperiencesthebreadtablesvg)"/>
+</svg>

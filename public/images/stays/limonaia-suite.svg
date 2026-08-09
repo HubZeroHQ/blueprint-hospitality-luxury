@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1050" width="1400" height="1050" role="img">
+  <defs>
+    <linearGradient id="wall-imagesstayslimonaiasuitesvg" x1="0.33" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#ded5c6"/>
+      <stop offset="100%" stop-color="#bdb2a0"/>
+    </linearGradient>
+    <linearGradient id="sky-imagesstayslimonaiasuitesvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d7e2e0"/>
+      <stop offset="62%" stop-color="#bcc9c6"/>
+      <stop offset="100%" stop-color="#f3f6f2"/>
+    </linearGradient>
+    <linearGradient id="spill-imagesstayslimonaiasuitesvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbf3e2" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#fbf3e2" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo-imagesstayslimonaiasuitesvg" cx="0.611" cy="0.467" r="0.66">
+      <stop offset="0%" stop-color="#fbf3e2" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#fbf3e2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-imagesstayslimonaiasuitesvg" cx="0.5" cy="0.5" r="0.78">
+      <stop offset="46%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.42"/>
+    </radialGradient>
+    <!-- The view is held just off focus, the way a lens holds it. -->
+    <filter id="depth-imagesstayslimonaiasuitesvg" x="-6%" y="-6%" width="112%" height="112%">
+      <feGaussianBlur stdDeviation="7.0"/>
+    </filter>
+    <clipPath id="opening-imagesstayslimonaiasuitesvg">
+      <rect x="597.9" y="149.1" width="515.5" height="683.3"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1400" height="1050" fill="url(#wall-imagesstayslimonaiasuitesvg)"/>
+  <rect width="1400" height="1050" fill="url(#halo-imagesstayslimonaiasuitesvg)"/>
+
+  <!-- the opening, and the place beyond it -->
+  <g clip-path="url(#opening-imagesstayslimonaiasuitesvg)" filter="url(#depth-imagesstayslimonaiasuitesvg)">
+    <rect x="597.9" y="149.1" width="515.5" height="683.3" fill="url(#sky-imagesstayslimonaiasuitesvg)"/>
+    <path d="M 597.9 476.0 L 613.1 482.4 L 628.3 489.6 L 643.4 497.1 L 658.6 506.0 L 673.7 517.2 L 688.9 528.9 L 704.1 536.9 L 719.2 537.6 L 734.4 531.6 L 749.6 522.4 L 764.7 514.2 L 779.9 508.2 L 795.0 503.2 L 810.2 497.7 L 825.4 492.6 L 840.5 489.8 L 855.7 490.0 L 870.8 490.5 L 886.0 487.4 L 901.2 478.9 L 916.3 467.0 L 931.5 456.1 L 946.7 449.6 L 961.8 447.6 L 977.0 448.2 L 992.1 450.6 L 1007.3 456.0 L 1022.5 465.8 L 1037.6 478.9 L 1052.8 491.4 L 1067.9 499.1 L 1083.1 501.1 L 1098.3 500.2 L 1113.4 500.3 L 1113.4 832.5 L 597.9 832.5 Z" fill="#6d6659" opacity="0.92"/>
+    <rect x="597.9" y="586.3" width="515.5" height="246.2" fill="#598f92" opacity="0.88"/>
+  </g>
+  <rect x="726.8" y="149.1" width="1.5" height="683.3" fill="#bdb2a0" opacity="0.7"/> <rect x="855.7" y="149.1" width="1.5" height="683.3" fill="#bdb2a0" opacity="0.7"/> <rect x="984.6" y="149.1" width="1.5" height="683.3" fill="#bdb2a0" opacity="0.7"/>
+  <rect x="597.9" y="149.1" width="515.5" height="683.3" fill="none" stroke="#7d6a49" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- the sill -->
+  <rect x="576.9" y="832.5" width="557.5" height="10.5" fill="#fbf3e2" opacity="0.24"/>
+
+  <!-- floor, and the light that falls across it -->
+  <rect y="737" width="1400" height="313" fill="#8f8371"/>
+  <path d="M 598 737 L 1113 737 L 1345 1050 L 418 1050 Z" fill="url(#spill-imagesstayslimonaiasuitesvg)"/>
+  <rect y="737" width="1400" height="1" fill="#7d6a49" opacity="0.3"/>
+
+  <!-- foreground -->
+  <rect x="42" y="623" width="515" height="114" fill="#8f8371" opacity="0.94"/>
+  <rect x="42" y="623" width="515" height="1.5" fill="#fbf3e2" opacity="0.2"/>
+
+
+
+  <rect width="1400" height="1050" fill="url(#vig-imagesstayslimonaiasuitesvg)"/>
+</svg>

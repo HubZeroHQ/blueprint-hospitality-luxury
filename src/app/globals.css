@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "../styles/tokens.css";
+@import "../styles/theme.css";
 
 *,
 *::before,
@@ -10,6 +11,11 @@
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
+  /* The floating navigation overlays content; in-page anchors clear it. */
+  scroll-padding-top: calc(var(--header-height) + 1.5rem);
+  -webkit-text-size-adjust: 100%;
+  /* Reserve the scrollbar so locking the page behind the menu shifts nothing. */
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -17,11 +23,50 @@ body {
   min-height: 100vh;
   overflow-x: clip;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--montreval-paper);
+  color: var(--montreval-ink);
+  font-family: var(--font-jost), "Avenir Next", Avenir, "Segoe UI", system-ui,
+    sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
+/*
+ * Interaction language — focus is stated plainly and quietly, in the brand's
+ * own ink rather than a browser default, and never removed.
+ */
 :focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+  outline: 1px solid currentColor;
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: var(--montreval-ink);
+  color: var(--montreval-paper);
+}
+
+/* A single hairline rule, used throughout as the blueprint's only divider. */
+.rule {
+  border: 0;
+  border-top: 1px solid var(--montreval-line);
+  margin: 0;
+}
+
+.rule-inverse {
+  border-top-color: var(--montreval-line-inverse);
+}
+
+/*
+ * Horizontal-overflow safety net. Media and long unbroken strings are the two
+ * recurring causes; neither should ever widen the document.
+ */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {

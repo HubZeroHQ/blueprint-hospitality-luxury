@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1050" width="1400" height="1050" role="img">
+  <defs>
+    <linearGradient id="wall-imagesjournalthecaseforstayinglongersvg" x1="0.36" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#2a241d"/>
+      <stop offset="100%" stop-color="#1a1611"/>
+    </linearGradient>
+    <linearGradient id="sky-imagesjournalthecaseforstayinglongersvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8a882"/>
+      <stop offset="62%" stop-color="#8d8177"/>
+      <stop offset="100%" stop-color="#e8c89a"/>
+    </linearGradient>
+    <linearGradient id="spill-imagesjournalthecaseforstayinglongersvg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0d9ae" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f0d9ae" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo-imagesjournalthecaseforstayinglongersvg" cx="0.807" cy="0.437" r="0.66">
+      <stop offset="0%" stop-color="#f0d9ae" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#f0d9ae" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-imagesjournalthecaseforstayinglongersvg" cx="0.5" cy="0.5" r="0.78">
+      <stop offset="46%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.42"/>
+    </radialGradient>
+    <!-- The view is held just off focus, the way a lens holds it. -->
+    <filter id="depth-imagesjournalthecaseforstayinglongersvg" x="-6%" y="-6%" width="112%" height="112%">
+      <feGaussianBlur stdDeviation="7.0"/>
+    </filter>
+    <clipPath id="opening-imagesjournalthecaseforstayinglongersvg">
+      <rect x="753.2" y="92.1" width="752.1" height="732.8"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1400" height="1050" fill="url(#wall-imagesjournalthecaseforstayinglongersvg)"/>
+  <rect width="1400" height="1050" fill="url(#halo-imagesjournalthecaseforstayinglongersvg)"/>
+
+  <!-- the opening, and the place beyond it -->
+  <g clip-path="url(#opening-imagesjournalthecaseforstayinglongersvg)" filter="url(#depth-imagesjournalthecaseforstayinglongersvg)">
+    <rect x="753.2" y="92.1" width="752.1" height="732.8" fill="url(#sky-imagesjournalthecaseforstayinglongersvg)"/>
+    <path d="M 753.2 352.5 L 775.3 358.3 L 797.4 367.1 L 819.6 376.6 L 841.7 386.9 L 863.8 399.2 L 885.9 413.0 L 908.0 424.8 L 930.2 430.4 L 952.3 428.4 L 974.4 421.6 L 996.5 415.0 L 1018.6 411.4 L 1040.8 410.0 L 1062.9 408.5 L 1085.0 405.9 L 1107.1 403.6 L 1129.2 403.1 L 1151.4 403.1 L 1173.5 400.0 L 1195.6 390.9 L 1217.7 376.4 L 1239.8 361.0 L 1262.0 349.4 L 1284.1 343.6 L 1306.2 341.9 L 1328.3 342.2 L 1350.4 344.5 L 1372.6 350.3 L 1394.7 360.0 L 1416.8 370.9 L 1438.9 378.7 L 1461.1 380.9 L 1483.2 379.2 L 1505.3 378.2 L 1505.3 825.0 L 753.2 825.0 Z" fill="#31383b" opacity="0.92"/>
+    <rect x="753.2" y="488.9" width="752.1" height="336.0" fill="#2b3336" opacity="0.88"/>
+  </g>
+
+  <rect x="753.2" y="92.1" width="752.1" height="732.8" fill="none" stroke="#a3854f" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- the sill -->
+  <rect x="732.2" y="825.0" width="794.1" height="10.5" fill="#f0d9ae" opacity="0.24"/>
+
+  <!-- floor, and the light that falls across it -->
+  <rect y="763" width="1400" height="287" fill="#150f0a"/>
+  <path d="M 753 763 L 1400 763 L 1844 1050 L 490 1050 Z" fill="url(#spill-imagesjournalthecaseforstayinglongersvg)"/>
+  <rect y="763" width="1400" height="1" fill="#a3854f" opacity="0.3"/>
+
+  <!-- foreground -->
+  <rect x="42" y="636" width="628" height="127" fill="#150f0a" opacity="0.94"/>
+  <rect x="42" y="636" width="628" height="1.5" fill="#f0d9ae" opacity="0.2"/>
+  <rect x="740" y="390" width="2" height="373" fill="#150f0a" opacity="0.86"/>
+  <circle cx="741" cy="390" r="32" fill="#f0d9ae" opacity="0.2"/>
+
+
+  <rect width="1400" height="1050" fill="url(#vig-imagesjournalthecaseforstayinglongersvg)"/>
+</svg>
