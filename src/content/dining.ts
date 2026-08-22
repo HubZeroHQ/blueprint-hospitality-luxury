@@ -62,7 +62,7 @@ export const restaurants: Restaurant[] = [
       },
     ],
     image: {
-      src: "/images/dining/cimaise.svg",
+      src: "/images/dining/cimaise.webp",
       alt: "The dining room at Cimaise beneath the original hayloft beams, tables lit low at dusk.",
     },
   },
@@ -109,7 +109,7 @@ export const restaurants: Restaurant[] = [
       },
     ],
     image: {
-      src: "/images/dining/le-batelier.svg",
+      src: "/images/dining/le-batelier.webp",
       alt: "The boathouse deck at Le Batelier set for lunch above the surface of Lake Verane.",
     },
   },
@@ -162,8 +162,8 @@ export const restaurants: Restaurant[] = [
       },
     ],
     image: {
-      src: "/images/dining/marena.svg",
-      alt: "Tables at Marena under a vine pergola on the terrace at Montreval Calanera, sea below.",
+      src: "/images/dining/marena.webp",
+      alt: "A table set beneath the stone vault at Marena, the Calanera sea beyond.",
     },
   },
   {
@@ -207,7 +207,7 @@ export const restaurants: Restaurant[] = [
       },
     ],
     image: {
-      src: "/images/dining/limonaia.svg",
+      src: "/images/dining/limonaia.webp",
       alt: "The open-sided Limonaia breakfast room among lemon trees at Montreval Calanera.",
     },
   },
@@ -313,7 +313,7 @@ export const restaurants: Restaurant[] = [
       },
     ],
     image: {
-      src: "/images/dining/nour.svg",
+      src: "/images/dining/nour.webp",
       alt: "The dining tent at Nour opened toward the escarpment, lit by fire and lanterns.",
     },
   },
@@ -358,7 +358,7 @@ export const restaurants: Restaurant[] = [
       },
     ],
     image: {
-      src: "/images/dining/hali.svg",
+      src: "/images/dining/hali.webp",
       alt: "The open-sided dining room at Hali standing over the shallows of the Tamerin lagoon.",
     },
   },
@@ -411,7 +411,7 @@ export const restaurants: Restaurant[] = [
       },
     ],
     image: {
-      src: "/images/dining/fyr.svg",
+      src: "/images/dining/fyr.webp",
       alt: "The dining room at Fyr facing the fjord through full-height glass with a fire lit at one end.",
     },
   },

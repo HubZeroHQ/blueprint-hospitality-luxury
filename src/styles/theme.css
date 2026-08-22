@@ -1,10 +1,12 @@
 /*
  * Montreval — Luxury design language.
  *
- * `tokens.css` supplies Blueprint Base's neutral defaults. This file is the
- * blueprint's own layer: it overrides the defaults the Luxury language has an
- * opinion about (corners, motion, container rhythm) and adds the brand's
- * material — colour, typography, hairlines, elevation.
+ * `tokens.css` supplies Blueprint Base's infrastructure tokens — the container
+ * width and the z-index scale Base's own components read. This file is the
+ * blueprint's own layer: it declares outright every token the Luxury language
+ * owns (corners, motion, easing), overrides the container rhythm, and adds the
+ * brand's material — colour, typography, hairlines, elevation. It stands in
+ * for Blueprint Base's `design-language.css`, which is not carried.
  *
  * Brand-owned values are declared once under a `--montreval-*` prefix, then
  * mapped onto Blueprint Base's token names and onto Tailwind's theme. Nothing
@@ -45,7 +47,8 @@
 
   /*
    * Corner language — barely rounded, uniform everywhere. Luxury permits
-   * sharp or nearly sharp; it never mixes the two. Overrides Blueprint Base.
+   * sharp or nearly sharp; it never mixes the two. Owned outright: Blueprint
+   * Base declares no radius scale for a design language to inherit.
    */
   --radius-sm: 2px;
   --radius-md: 2px;
@@ -56,14 +59,21 @@
 
   /*
    * Motion language — unhurried, symmetrical, without bounce or overshoot.
-   * Slower than Blueprint Base's neutral defaults by design: a Luxury
-   * interface moves like a well-made mechanism, not like software.
+   * Slower than the neutral values Blueprint Base seeds a new blueprint with:
+   * a Luxury interface moves like a well-made mechanism, not like software.
    */
   --duration-instant: 120ms;
   --duration-fast: 240ms;
   --duration-normal: 420ms;
   --duration-slow: 900ms;
   --duration-reveal: 1100ms;
+
+  /*
+   * How far the page scrolls while a `Reveal` block completes its entrance.
+   * Distance rather than time, because the entrance is driven by the scroll
+   * position and not by a clock. Generous, in keeping with the rest.
+   */
+  --reveal-distance: 20rem;
 
   --ease-standard: var(--montreval-ease-standard);
   --ease-out: var(--montreval-ease-out);
@@ -225,42 +235,87 @@
 /*
  * Motion language, applied to Blueprint Base's `Reveal` mechanism.
  *
- * Reveal only toggles `data-state`; the movement itself is a design decision
- * and belongs here. Opacity and a short rise — never a scale, never a bounce.
- * `Reveal` treats reduced-motion visitors as already revealed, and the global
- * reduced-motion rule in `globals.css` collapses the transition regardless.
+ * `Reveal` renders no JavaScript: it marks a block with `data-reveal` and the
+ * movement is a design decision that belongs here. Opacity and a short rise —
+ * never a scale, never a bounce.
+ *
+ * The entrance is scroll-driven rather than observer-driven, which is what
+ * `.hubzero/rendering.md` — Progressive Enhancement requires: where
+ * `animation-timeline` is unsupported the duration resolves to `0s` and `both`
+ * settles the block on its final frame, so the content is simply there. No
+ * selector below can leave a block hidden in a state only script could exit.
+ *
+ * The range is stated as a length rather than a percentage so the rise takes
+ * the same unhurried distance whatever the block's height — a percentage of
+ * the entry range makes a tall section fade in over thousands of pixels.
  */
 [data-reveal] {
-  transition: opacity var(--duration-reveal) var(--ease-out),
-    transform var(--duration-reveal) var(--ease-out);
+  animation: montreval-reveal var(--ease-out) both;
+  animation-timeline: view();
+  animation-range: entry 0% entry var(--reveal-distance);
 }
 
-[data-reveal][data-state="hidden"] {
-  opacity: 0;
-  transform: translateY(1.25rem);
-}
-
-[data-reveal][data-state="visible"] {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes montreval-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*
  * Staggered members of a revealed group, for editorial sequences.
  *
- * Driven either by Blueprint Base's `Reveal` (`[data-reveal]`) or by any
- * component that stages its own content, such as the menu (`[data-stage]`).
- * Both toggle the same `data-state`, so the timing is written once.
+ * Inside a `Reveal` each member runs on its own view timeline, offset by its
+ * index, so the group arrives in sequence rather than at once. The menu
+ * (`[data-stage]`) stages its own content from an open/closed state instead,
+ * and keeps the transition form — the timing is written once for both.
  */
-[data-reveal] [data-reveal-step],
+[data-reveal] [data-reveal-step] {
+  animation: montreval-reveal-step var(--ease-out) both;
+  animation-timeline: view();
+  animation-range: entry calc(var(--reveal-step, 0) * 3rem) entry
+    calc(var(--reveal-distance) + var(--reveal-step, 0) * 3rem);
+}
+
+@keyframes montreval-reveal-step {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 [data-stage] [data-reveal-step] {
   transition: opacity var(--duration-reveal) var(--ease-out),
     transform var(--duration-reveal) var(--ease-out);
   transition-delay: calc(var(--reveal-step, 0) * 110ms);
 }
 
-[data-reveal][data-state="hidden"] [data-reveal-step],
 [data-stage][data-state="hidden"] [data-reveal-step] {
   opacity: 0;
   transform: translateY(0.75rem);
+}
+
+/*
+ * Reduced motion removes the entrance outright rather than shortening it.
+ * Stated here rather than left to the global rule in `globals.css`, because a
+ * scroll-driven animation takes its progress from the timeline and not from
+ * `animation-duration` — collapsing the duration would not reliably settle it.
+ */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal] [data-reveal-step],
+  [data-stage] [data-reveal-step],
+  [data-stage][data-state="hidden"] [data-reveal-step] {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }

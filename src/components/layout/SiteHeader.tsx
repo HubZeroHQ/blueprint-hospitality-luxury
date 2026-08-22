@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/layout/Container";
@@ -30,6 +30,7 @@ import { isActivePath } from "@/utils/navigation";
 export function SiteHeader() {
   const pathname = usePathname();
   const settled = useScrolled(24);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   /*
    * The menu remembers which route it was opened on, and is only open while
@@ -124,6 +125,7 @@ export function SiteHeader() {
               </Button>
 
               <button
+                ref={menuButtonRef}
                 type="button"
                 onClick={openMenu}
                 aria-expanded={menuOpen}
@@ -144,7 +146,11 @@ export function SiteHeader() {
         </Container>
       </header>
 
-      <MenuOverlay open={menuOpen} onClose={closeMenu} />
+      <MenuOverlay
+        open={menuOpen}
+        onClose={closeMenu}
+        triggerRef={menuButtonRef}
+      />
     </>
   );
 }

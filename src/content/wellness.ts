@@ -71,7 +71,7 @@ export const spas: Spa[] = [
     ],
     hours: "07:00 – 21:00 daily. Treatments from 09:00.",
     image: {
-      src: "/images/wellness/serene-verane.svg",
+      src: "/images/wellness/serene-verane.webp",
       alt: "The spring-fed thermal bath at Sérène Verane cut into limestone, steam rising in low light.",
     },
   },
@@ -124,8 +124,8 @@ export const spas: Spa[] = [
     ],
     hours: "08:00 – 20:00 daily. Hammam heated from 14:00.",
     image: {
-      src: "/images/wellness/serene-sabaia.svg",
-      alt: "The wood-fired stone hammam at Sérène Sabaia built into a fissure in the escarpment.",
+      src: "/images/wellness/serene-sabaia.webp",
+      alt: "A shaded mineral bathing court at Sérène Sabaia beneath the escarpment.",
     },
   },
   {
@@ -177,7 +177,7 @@ export const spas: Spa[] = [
     ],
     hours: "09:00 – 19:00 daily.",
     image: {
-      src: "/images/wellness/serene-tamerin.svg",
+      src: "/images/wellness/serene-tamerin.webp",
       alt: "A treatment pavilion at Sérène Tamerin standing over the lagoon with light off the water.",
     },
   },

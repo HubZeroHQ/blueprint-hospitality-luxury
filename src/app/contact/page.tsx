@@ -57,8 +57,8 @@ export default function ContactPage() {
         title="Who to write to"
         standfirst="Five addresses and one telephone number, all of them answered by people who work here. Nothing routes through an agency or a call centre."
         image={{
-          src: "/images/pages/contact.svg",
-          alt: "Daylight on the northern shore of Lindhavn fjord.",
+          src: "/images/pages/contact.webp",
+          alt: "A reservations writing desk at Montreval Verane overlooking the lake.",
         }}
         crumbs={crumbs}
         priority

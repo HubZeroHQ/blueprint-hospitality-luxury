@@ -47,7 +47,7 @@ export const experiences: Experience[] = [
       "Return by eight in the morning",
     ],
     image: {
-      src: "/images/experiences/the-dawn-crossing.svg",
+      src: "/images/experiences/the-dawn-crossing.webp",
       alt: "A wooden rowing boat crossing flat water on Lake Verane before sunrise.",
     },
   },
@@ -80,8 +80,8 @@ export const experiences: Experience[] = [
       "Suitable for anyone comfortable walking four hours",
     ],
     image: {
-      src: "/images/experiences/larch-and-stone.svg",
-      alt: "A worked larch forest above Lake Verane, marked trunks and limestone showing through above.",
+      src: "/images/experiences/larch-and-stone.webp",
+      alt: "An artisan and guest fitting a larch joint beside local limestone in the Verane workshop.",
     },
   },
   {
@@ -125,8 +125,8 @@ export const experiences: Experience[] = [
       "Back at the house by three o'clock",
     ],
     image: {
-      src: "/images/experiences/the-salt-path.svg",
-      alt: "The mouth of a sea cave at Vinca on the Calanera coast, light striking clear water inside.",
+      src: "/images/experiences/the-salt-path.webp",
+      alt: "Two guests walking the old salt path above the Calanera coast in early light.",
     },
   },
   {
@@ -203,8 +203,8 @@ export const experiences: Experience[] = [
       "Suitable for beginners; the horses are calm",
     ],
     image: {
-      src: "/images/experiences/the-silver-hour.svg",
-      alt: "Riders crossing open sand toward the Sabaia escarpment as it catches the last light.",
+      src: "/images/experiences/the-silver-hour.webp",
+      alt: "A winemaker pouring for two guests beside the Aubris vines at twilight.",
     },
   },
   {
@@ -240,8 +240,8 @@ export const experiences: Experience[] = [
       "Suitable for competent swimmers",
     ],
     image: {
-      src: "/images/experiences/reading-the-reef.svg",
-      alt: "A survey transect line laid across coral on the northern arm of the Tamerin reef.",
+      src: "/images/experiences/reading-the-reef.webp",
+      alt: "A marine naturalist showing two guests coral beneath the clear Tamerin lagoon.",
     },
   },
   {
@@ -281,8 +281,8 @@ export const experiences: Experience[] = [
       "Staffed cold-water entry at all times",
     ],
     image: {
-      src: "/images/experiences/ice-and-steam.svg",
-      alt: "Steam rising from the cold plunge cut through the bathhouse deck at Lindhavn.",
+      src: "/images/experiences/ice-and-steam.webp",
+      alt: "A guest leaving the warm Lindhavn sauna for the cold-water ladder into the fjord.",
     },
   },
   {
@@ -318,8 +318,8 @@ export const experiences: Experience[] = [
       "No experience needed at all",
     ],
     image: {
-      src: "/images/experiences/the-bread-table.svg",
-      alt: "Loaves proving on a floured bench in the courtyard bakehouse at Maison Aubris.",
+      src: "/images/experiences/the-bread-table.webp",
+      alt: "A baker and two guests shaping loaves around a floured oak table at Maison Aubris.",
     },
   },
 ];

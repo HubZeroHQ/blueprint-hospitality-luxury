@@ -75,7 +75,7 @@ export const stays: Stay[] = [
       "Direct steps to the shore path",
     ],
     image: {
-      src: "/images/stays/lake-suite.svg",
+      src: "/images/stays/lake-suite.webp",
       alt: "The sitting room of a Lake Suite at Montreval Verane with its fire lit at dusk.",
     },
   },
@@ -145,7 +145,7 @@ export const stays: Stay[] = [
       "Kitchenette for coffee and cold things only",
     ],
     image: {
-      src: "/images/stays/limonaia-suite.svg",
+      src: "/images/stays/limonaia-suite.webp",
       alt: "The vaulted living room of the Limonaia Suite at Montreval Calanera opening to a walled garden.",
     },
   },
@@ -180,7 +180,7 @@ export const stays: Stay[] = [
       "No television anywhere at Aubris",
     ],
     image: {
-      src: "/images/stays/vigneron-room.svg",
+      src: "/images/stays/vigneron-room.webp",
       alt: "A Vigneron Room at Maison Aubris, chalk-washed walls and a window framing vine rows.",
     },
   },
@@ -215,7 +215,7 @@ export const stays: Stay[] = [
       "Step-free from the courtyard throughout",
     ],
     image: {
-      src: "/images/stays/the-old-press.svg",
+      src: "/images/stays/the-old-press.webp",
       alt: "The double-height living room of The Old Press at Maison Aubris beneath its original beam press.",
     },
   },
@@ -285,7 +285,7 @@ export const stays: Stay[] = [
       "Nearest suites to the observatory platform",
     ],
     image: {
-      src: "/images/stays/oasis-suite-tent.svg",
+      src: "/images/stays/oasis-suite-tent.webp",
       alt: "An Oasis Suite Tent at Montreval Sabaia with its fire bowl lit above the palm gardens.",
     },
   },
@@ -355,7 +355,7 @@ export const stays: Stay[] = [
       "Suitable for a family of five",
     ],
     image: {
-      src: "/images/stays/reef-house.svg",
+      src: "/images/stays/reef-house.webp",
       alt: "A Reef House at Montreval Tamerin among palms at the northern end of the beach.",
     },
   },
@@ -425,7 +425,7 @@ export const stays: Stay[] = [
       "Ninety seconds' walk from the bathhouse",
     ],
     image: {
-      src: "/images/stays/boathouse-suite.svg",
+      src: "/images/stays/boathouse-suite.webp",
       alt: "The Boathouse Suite at Montreval Lindhavn standing over black water at blue hour.",
     },
   },

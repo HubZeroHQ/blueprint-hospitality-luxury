@@ -59,7 +59,7 @@ export default function ReservationsPage() {
         title="How to reserve a stay"
         standfirst="Reservations are taken by our own team rather than an agency. We ask three questions before quoting: which house, roughly when, and how long you can stay. The third changes the answer more than people expect."
         image={{
-          src: "/images/pages/reservations.svg",
+          src: "/images/pages/reservations.webp",
           alt: "Lake Verane before sunrise, the far shore still in shadow.",
         }}
         crumbs={crumbs}

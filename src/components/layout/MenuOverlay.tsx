@@ -1,18 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, type CSSProperties } from "react";
+import { useEffect, useRef, type CSSProperties, type RefObject } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/ui/Type";
 import { menuNavigation, primaryAction } from "@/config/navigation";
 import { site } from "@/config/site";
+import { useDismissible } from "@/hooks/useDismissible";
 import { cn } from "@/utils/cn";
 
 interface MenuOverlayProps {
   open: boolean;
   onClose: () => void;
+  /** The control that opened the menu. Focus returns to it on close. */
+  triggerRef: RefObject<HTMLButtonElement | null>;
 }
 
 const FOCUSABLE =
@@ -28,7 +31,7 @@ const FOCUSABLE =
  * blueprint motion is used for atmosphere rather than feedback — and it
  * collapses entirely under `prefers-reduced-motion`.
  */
-export function MenuOverlay({ open, onClose }: MenuOverlayProps) {
+export function MenuOverlay({ open, onClose, triggerRef }: MenuOverlayProps) {
   const panelRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
 
@@ -37,22 +40,19 @@ export function MenuOverlay({ open, onClose }: MenuOverlayProps) {
       return;
     }
 
-    const previouslyFocused = document.activeElement as HTMLElement | null;
-    // The scroll container is the root element, not the body — locking the
-    // body alone leaves the page scrolling behind the menu.
     const root = document.documentElement;
     const previousOverflow = root.style.overflow;
 
     root.style.overflow = "hidden";
     closeRef.current?.focus();
 
+    /*
+     * Focus containment stays local: Base deliberately excludes it, because a
+     * correct trap depends on the markup being trapped. This panel is a `div`
+     * dialog kept in the tree so it can fade, rather than a modal `<dialog>`,
+     * so the platform does not provide one here.
+     */
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        event.preventDefault();
-        onClose();
-        return;
-      }
-
       if (event.key !== "Tab" || !panelRef.current) {
         return;
       }
@@ -82,9 +82,43 @@ export function MenuOverlay({ open, onClose }: MenuOverlayProps) {
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       root.style.overflow = previousOverflow;
-      previouslyFocused?.focus();
+
+      /*
+       * Focus is returned here as well as by Base. `useDismissible` restores
+       * focus only where it finds focus was lost, which is right for a
+       * surface that unmounts; this panel stays mounted and merely becomes
+       * `inert`, so the browser has not moved focus out of it yet when that
+       * check runs and the hook correctly declines. Both target the trigger,
+       * so the two compose rather than compete.
+       *
+       * Read at close time rather than snapshotted at open: if the header
+       * re-rendered the trigger into a different node while the menu was
+       * open, the current node is the one to return focus to.
+       */
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      triggerRef.current?.focus();
     };
-  }, [open, onClose]);
+  }, [open, triggerRef]);
+
+  /*
+   * Escape-to-dismiss and focus restoration are Blueprint Base's, not this
+   * blueprint's.
+   *
+   * `lockScroll` is declined because Base locks the body, and `globals.css`
+   * sets `overflow-x: clip` on the root element — which makes the root the
+   * scroll container, so a body lock would leave the page scrolling behind
+   * the menu. The root-level lock above is the replacement.
+   *
+   * The trigger is named explicitly rather than left to Base's default of
+   * "whatever was focused when the menu opened", because the effect above
+   * moves focus into the panel and runs first.
+   */
+  useDismissible({
+    open,
+    onDismiss: onClose,
+    restoreFocusTo: triggerRef,
+    lockScroll: false,
+  });
 
   return (
     <div

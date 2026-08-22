@@ -22,6 +22,18 @@ export const site = {
   /** Fictional company, founded for this blueprint. */
   founded: 1998,
 
+  /**
+   * Authored date of the last meaningful content change (`YYYY-MM-DD`).
+   *
+   * Sitemap freshness derives from this rather than from the build clock, so
+   * the output of two builds of the same content is identical. Records that
+   * carry their own authored date — journal entries, legal documents — use
+   * theirs; everything else falls back to this. See
+   * `.hubzero/content/principles.md` — Temporal State Is Authored, and
+   * `.hubzero/rendering.md` — Current time.
+   */
+  contentUpdated: "2026-08-09",
+
   themeColor: "#14120F",
   icon: "/favicon.ico",
 

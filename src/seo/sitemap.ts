@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
+import { site } from "@/config/site";
 import {
   destinations,
   experiences,
@@ -15,14 +16,21 @@ import { seoDefaults } from "./defaults";
 /**
  * Every route the site serves, generated from the same content the pages
  * render — so a new house or article cannot be added without appearing here.
+ *
+ * Freshness is authored, never taken from the build clock. `new Date()` would
+ * report every page as modified on every build, which is untrue and makes the
+ * output of two builds of identical content differ. Records that carry their
+ * own date use it; the rest fall back to `site.contentUpdated`. See
+ * `.hubzero/content/principles.md` — Temporal State Is Authored.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  const siteUpdated = new Date(site.contentUpdated);
 
   const entry = (
     path: string,
     priority: number,
-    changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] = "monthly"
+    changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] = "monthly",
+    lastModified: Date = siteUpdated
   ) => ({
     url: new URL(path, seoDefaults.url).toString(),
     lastModified,
@@ -58,8 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...restaurants.map((item) => entry(`/dining/${item.slug}`, 0.6)),
     ...spas.map((item) => entry(`/wellness/${item.slug}`, 0.6)),
     ...experiences.map((item) => entry(`/experiences/${item.slug}`, 0.6)),
-    ...journalArticles.map((item) => entry(`/journal/${item.slug}`, 0.5)),
+    ...journalArticles.map((item) =>
+      entry(`/journal/${item.slug}`, 0.5, "monthly", new Date(item.publishedAt))
+    ),
 
-    ...legalDocuments.map((item) => entry(`/${item.slug}`, 0.3, "yearly")),
+    ...legalDocuments.map((item) =>
+      entry(`/${item.slug}`, 0.3, "yearly", new Date(item.updated))
+    ),
   ];
 }

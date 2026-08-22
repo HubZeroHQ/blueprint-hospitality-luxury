@@ -1,5 +1,13 @@
 @import "tailwindcss";
+
+/* Base infrastructure — Base's own components depend on these. */
 @import "../styles/tokens.css";
+
+/*
+ * The Luxury design language. Blueprint Base seeds neutral radius, duration
+ * and easing values in a `design-language.css` that a blueprint may delete
+ * outright; Montreval declares all of them itself, so this file replaces it.
+ */
 @import "../styles/theme.css";
 
 *,

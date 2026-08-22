@@ -1,57 +1,48 @@
-"use client";
-
 import type { HTMLAttributes } from "react";
 
-import { useInView, type UseInViewOptions } from "@/hooks/useInView";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { cn } from "@/utils/cn";
 
-interface RevealProps
-  extends HTMLAttributes<HTMLDivElement>,
-    UseInViewOptions {}
+type RevealProps = HTMLAttributes<HTMLDivElement>;
 
 /**
- * Reveal is a mechanism, not an aesthetic. It exposes `data-state`
- * ("hidden" | "visible") for a design language's own CSS to animate —
- * it never applies opacity, transform, or timing itself, since those are
- * Motion Language decisions that belong to each blueprint. For example:
+ * Reveal is a mechanism, not an aesthetic. It marks a block as a scroll-entrance
+ * target with `data-reveal` and leaves every visual decision — distance, timing,
+ * easing, or no motion at all — to the design language's own CSS.
+ *
+ * It is a server component and renders no client JavaScript. That is the whole
+ * point: content inside it is present and visible in the server's markup, and
+ * motion is layered on top by CSS. Per `.hubzero/rendering.md` — Progressive
+ * Enhancement, content must never start in a hidden state it can only escape
+ * via JavaScript. An observer-driven reveal has two independent ways to leave
+ * content invisible forever (scripting that never runs, and reduced motion),
+ * and neither is caught by visual review or a component test.
+ *
+ * Drive it with a scroll-driven animation, which needs no script and degrades
+ * to plain visible content wherever it is unsupported:
  *
  *   [data-reveal] {
- *     transition: opacity var(--duration-normal) var(--ease-standard),
- *       transform var(--duration-normal) var(--ease-standard);
+ *     animation: reveal-rise linear both;
+ *     animation-timeline: view();
+ *     animation-range: entry 0% entry 60%;
  *   }
- *   [data-reveal][data-state="hidden"] { opacity: 0; transform: translateY(1rem); }
- *   [data-reveal][data-state="visible"] { opacity: 1; transform: translateY(0); }
  *
- * When the user prefers reduced motion, content is treated as already
- * visible rather than animated in.
+ *   @keyframes reveal-rise {
+ *     from { opacity: 0; transform: translateY(1rem); }
+ *     to   { opacity: 1; transform: translateY(0); }
+ *   }
+ *
+ * The degradation is load-bearing: with no `animation-timeline` support the
+ * duration defaults to `0s` and `both` settles the element on its `to` frame,
+ * so the content is simply visible. Reduced motion is handled globally in
+ * `globals.css`; a language wanting a different composition rather than merely
+ * a static one should say so explicitly in its own media query.
+ *
+ * The one rule a design language must not break: no selector may leave a
+ * `[data-reveal]` block hidden in a state that only script can exit.
  */
-export function Reveal({
-  root,
-  rootMargin,
-  threshold,
-  once,
-  className,
-  children,
-  ...props
-}: RevealProps) {
-  const { ref, inView } = useInView<HTMLDivElement>({
-    root,
-    rootMargin,
-    threshold,
-    once,
-  });
-  const reducedMotion = useReducedMotion();
-  const revealed = inView || reducedMotion;
-
+export function Reveal({ className, children, ...props }: RevealProps) {
   return (
-    <div
-      ref={ref}
-      data-reveal
-      data-state={revealed ? "visible" : "hidden"}
-      className={cn(className)}
-      {...props}
-    >
+    <div data-reveal className={cn(className)} {...props}>
       {children}
     </div>
   );

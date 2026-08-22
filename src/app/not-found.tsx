@@ -21,7 +21,7 @@ export default function NotFound() {
         title="This page is not here"
         standfirst="Which is our fault rather than yours. Everything the collection publishes is one link below, and reservations will happily find whatever you were after."
         image={{
-          src: "/images/pages/not-found.svg",
+          src: "/images/pages/not-found.webp",
           alt: "The Sabaia sands at night, the escarpment barely visible under stars.",
         }}
         size="tall"

@@ -60,9 +60,9 @@ src/
     home/       The light sequence — this blueprint's signature experience
   config/       site.ts, navigation.ts, metadata.ts, env.ts
   content/      All copy and data, typed. Nothing else in the app hardcodes content.
-  hooks/        useInView, useReducedMotion, useScrolled
+  hooks/        useDismissible, useInView, useReducedMotion, useScrolled
   seo/          Metadata, JSON-LD, sitemap, robots, manifest
-  styles/       tokens.css (Blueprint Base) and theme.css (this blueprint's layer)
+  styles/       tokens.css (Blueprint Base infrastructure) and theme.css (the Luxury layer)
   utils/        cn, navigation helpers, deterministic formatters
 public/
   brand/        Logo, brand mark, Open Graph image
@@ -79,7 +79,7 @@ Re-branding this blueprint should never require editing a component.
 1. **`src/config/site.ts`** — name, tagline, description, URL, contact details, address, asset paths, and the editorial conventions (locale, currency).
 2. **`src/config/navigation.ts`** — the primary bar, the full menu and the footer.
 3. **`src/content/`** — every word on the site. Each file is typed against `src/content/types.ts`, and `src/content/index.ts` is the only module pages import from.
-4. **`src/styles/theme.css`** — colour, typography, motion, corners, borders, shadow and spacing. Brand values are declared once under a `--montreval-*` prefix and mapped onto Blueprint Base's token names and Tailwind's theme.
+4. **`src/styles/theme.css`** — colour, typography, motion, corners, borders, shadow and spacing. Brand values are declared once under a `--montreval-*` prefix and mapped onto Blueprint Base's token names and Tailwind's theme. `tokens.css` holds only the infrastructure tokens Base's own components read — the container width and the z-index scale — and theme.css declares outright every token the Luxury language owns.
 5. **`public/brand/` and `public/images/`** — replace the files; the paths are referenced through configuration, never hardcoded.
 
 Adding a house, a room, a kitchen or a journal entry means adding an object to the relevant file in `src/content/`. The route, the sitemap entry, the structured data and the index card all follow from it.

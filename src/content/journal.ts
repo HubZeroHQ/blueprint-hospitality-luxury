@@ -53,7 +53,7 @@ export const journalArticles: JournalArticle[] = [
       },
     ],
     image: {
-      src: "/images/journal/what-we-mean-by-quiet.svg",
+      src: "/images/journal/what-we-mean-by-quiet.webp",
       alt: "An empty reading room at Montreval Verane in late afternoon light, one chair by the window.",
     },
   },
@@ -97,8 +97,8 @@ export const journalArticles: JournalArticle[] = [
       },
     ],
     image: {
-      src: "/images/journal/nine-weeks-of-lemon.svg",
-      alt: "Salted lemons in glass jars on a stone shelf in the cellar at Montreval Calanera.",
+      src: "/images/journal/nine-weeks-of-lemon.webp",
+      alt: "Freshly harvested Calanera lemons being sorted into a wooden crate above the sea.",
     },
   },
   {
@@ -153,8 +153,8 @@ export const journalArticles: JournalArticle[] = [
       },
     ],
     image: {
-      src: "/images/journal/the-case-for-staying-longer.svg",
-      alt: "An unmade bed and a half-open shutter in a guest room in mid-morning light.",
+      src: "/images/journal/the-case-for-staying-longer.webp",
+      alt: "A guest reading alone in the Aubris courtyard during a long late afternoon.",
     },
   },
   {
@@ -245,8 +245,8 @@ export const journalArticles: JournalArticle[] = [
       },
     ],
     image: {
-      src: "/images/journal/reading-water.svg",
-      alt: "A small boat on black fjord water beneath low cloud on the northern shore at Lindhavn.",
+      src: "/images/journal/reading-water.webp",
+      alt: "A marine field notebook held above the shallow Tamerin reef at first light.",
     },
   },
   {
@@ -290,8 +290,8 @@ export const journalArticles: JournalArticle[] = [
       },
     ],
     image: {
-      src: "/images/journal/the-vines-that-were-nearly-lost.svg",
-      alt: "Old vine stocks on the western slope at Maison Aubris in low autumn light.",
+      src: "/images/journal/the-vines-that-were-nearly-lost.webp",
+      alt: "A viticulturist tying a gnarled heritage vine to its stake at Maison Aubris.",
     },
   },
 ];
